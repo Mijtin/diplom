@@ -1,0 +1,53 @@
+﻿<Window x:Class="diploom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploom"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Приложение для пользователей" Height="450" Width="800">
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Grid Background="AliceBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="133*"/>
+                    <ColumnDefinition Width="155*"/>
+                    <ColumnDefinition Width="111*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Margin="20,10,20,0" FontSize="14" FontFamily="Arial" VerticalAlignment="Top" Height="66"><Run Text="Введите vin или "/><LineBreak/><Run Text="государственны"/><Run Text="й номер"/></TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Введите vin" Margin="20,0,20,0" FontSize="14" FontFamily="Arial" VerticalAlignment="Center" Height="16"/>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="Введите гос номер" Margin="20,0,20,0" FontSize="14" FontFamily="Arial" VerticalAlignment="Center" Height="16"/>
+                <TextBox Name="text_vin"   Grid.Row="0" Grid.Column="2" TextWrapping="NoWrap" Text="JTMHT05J004002884" Margin="0,29,0,28"/>
+                <TextBox Name="text_gos"  Grid.Row="1" Grid.Column="2" TextWrapping="NoWrap" Text="" Margin="0,28,0,28"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" Text="Дополнительный выбор" Margin="20,0,20,0" FontSize="14" FontFamily="Arial" VerticalAlignment="Center" Height="16"/>
+                <Button x:Name="StartBtn" Grid.Row="3" Grid.Column="2" Content="Запустить" Click="StartBtn_Click" Margin="0,23,0,24"/>
+                <ComboBox Name ="Combo_choose" SelectedValuePath="Name" Margin="10,28,0,28" Grid.Row="2" Grid.Column="2">
+                    <ComboBoxItem>История регистраций</ComboBoxItem>
+                    <ComboBoxItem>История ДТП</ComboBoxItem>
+                    <ComboBoxItem>Розыск ТС</ComboBoxItem>
+                    <ComboBoxItem>Наличие ограничений</ComboBoxItem>
+                    <ComboBoxItem>Пройденные ТО и пробег (ГИБДД)</ComboBoxItem>
+                    <ComboBoxItem>Использование в такси</ComboBoxItem>
+                    <ComboBoxItem>Реестр залогов</ComboBoxItem>
+                    <ComboBoxItem>Поиск судебных решений</ComboBoxItem>
+                    <ComboBoxItem>Наличие ограничений</ComboBoxItem>
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Button Name="aurorize" Grid.Row="4" Grid.Column="0" Content="Авторизация" Click="Aurorize_Click" Margin="0,23,0,24"/>
+                
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

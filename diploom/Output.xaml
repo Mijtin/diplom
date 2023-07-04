@@ -1,0 +1,13 @@
+﻿<Window x:Class="diploom.Output"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploom"
+        mc:Ignorable="d"
+        Title="Second" Height="700" Width="900">
+
+        <DataGrid x:Name="myDataGrid" IsReadOnly="False" HorizontalAlignment="Center" Height="600" Width="900" Margin="0,23,0,0" VerticalAlignment="Top"  RowHeaderWidth="50"  AutoGenerateColumns="False"  >
+        </DataGrid>
+
+</Window>

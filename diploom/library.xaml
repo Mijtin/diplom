@@ -1,0 +1,43 @@
+﻿<Window x:Class="diploom.library"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploom"
+        mc:Ignorable="d"
+        Title="library" Height="350" Width="600">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Библиотека машин" VerticalAlignment="Top" Width="120"/>
+        <ListView x:Name="list_of_cars" Margin="0,40,0,10" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="{Binding gosNumber}" FontWeight="Bold"></TextBlock>
+                        <TextBlock Text=","></TextBlock>
+                        <TextBlock Text="{Binding yearNumber}"></TextBlock>
+                        <TextBlock Text=","></TextBlock>
+                        <TextBlock Text="{Binding vin}"></TextBlock>
+                        <TextBlock Text=","></TextBlock>
+                        <CheckBox IsChecked="{Binding sold}" Content="Продана машина"/>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ComboBox Name ="Combo_choose" SelectedValuePath="Name" Margin="338,11,10,0" VerticalAlignment="Top" Height="22">
+            <ComboBoxItem>История регистраций</ComboBoxItem>
+            <ComboBoxItem>История ДТП</ComboBoxItem>
+            <ComboBoxItem>Розыск ТС</ComboBoxItem>
+            <ComboBoxItem>Наличие ограничений</ComboBoxItem>
+            <ComboBoxItem>Пройденные ТО и пробег (ГИБДД)</ComboBoxItem>
+            <ComboBoxItem>Использование в такси</ComboBoxItem>
+            <ComboBoxItem>Реестр залогов</ComboBoxItem>
+            <ComboBoxItem>Поиск судебных решений</ComboBoxItem>
+            <ComboBoxItem>Наличие ограничений</ComboBoxItem>
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</Window>

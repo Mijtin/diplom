@@ -1,0 +1,22 @@
+﻿<Window x:Class="diploom.Enter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploom"
+        mc:Ignorable="d"
+        Title="Window1" Height="302" Width="230">
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Grid Background="AliceBlue" Margin="-1,0,-9,0">
+                <Label  Content="Логин" HorizontalAlignment="Left" Margin="25,39,0,0" VerticalAlignment="Top"/>
+                <Label Content="Пароль" HorizontalAlignment="Left" Margin="25,93,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="text_login" HorizontalAlignment="Left" Margin="25,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+                <PasswordBox x:Name="text_password" HorizontalAlignment="Left" Margin="25,124,0,0" VerticalAlignment="Top" Width="137"/>
+                <Button x:Name="enter"  Content="Войти" HorizontalAlignment="Left" Margin="25,157,0,0" VerticalAlignment="Top" Width="94" Click="enter_Click"/>
+                <Button x:Name="reg" Content="Регистрация" HorizontalAlignment="Left" Margin="25,204,0,0" VerticalAlignment="Top" Click="reg_Click_1"/>
+                <Label FontStyle="Italic" FontWeight="Bold" Content="Авторизация" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="121"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

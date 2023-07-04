@@ -1,0 +1,21 @@
+﻿<Window x:Class="diploom.regin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diploom"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="regin" Height="332" Width="230">
+    <Grid>
+        <Label Content="Введите логин" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="text_login" HorizontalAlignment="Left" Margin="17,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Введите пароль" HorizontalAlignment="Left" Margin="17,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="17,133,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="text_password" HorizontalAlignment="Left" Margin="17,103,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="text_password_2" HorizontalAlignment="Left" Margin="17,173,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="reg" Content="Регистрация" HorizontalAlignment="Left" Margin="16,203,0,0" VerticalAlignment="Top" Click="reg_Click"/>
+        <Button x:Name="refuse" Content="Отмена" HorizontalAlignment="Left" Margin="16,240,0,14" Click="refuse_Click"/>
+        <TextBlock x:Name="check" HorizontalAlignment="Left" Margin="127,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
